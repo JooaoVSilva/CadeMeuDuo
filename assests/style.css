@@ -1,6 +1,24 @@
+body{
+    padding: 0;
+    margin: 0;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+body {
+    background-image: url(img/ceu-estrelado-a-noite-para-segundo-plano_474467-1919.avif);
+    background-position: right;
+    background-size: cover;
+}
+
 .menu {
     transition: 0.6s;
-    background-color: rgb(91, 64, 245);
+    background-color: black;
+    display: flex;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
 }
 
 .menu ul {
@@ -17,6 +35,7 @@
 .menu ul li {
     font-size: 15px;
     transition: 0.6s;
+    color: aliceblue;
 }
 
 .menu ul li a img:hover {
@@ -47,6 +66,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    color: white;
 }
 
 .section_banner_inicial .imagem_banner_inicial {
@@ -61,4 +81,9 @@
     border-top-left-radius: 100px;
     border-bottom-right-radius: 100px;
     filter: grayscale(20%);
+}
+
+
+section_background {
+    background-size: cover;
 }
