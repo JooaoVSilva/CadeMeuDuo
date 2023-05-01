@@ -1,11 +1,11 @@
-body{
+body {
     padding: 0;
     margin: 0;
     font-family: 'Times New Roman', Times, serif;
 }
 
 body {
-    background-image: url(img/ceu-estrelado-a-noite-para-segundo-plano_474467-1919.avif);
+    background-image: url(img/ceu-estrelado-com-nebulosa_104785-439.avif);
     background-position: right;
     background-size: cover;
 }
@@ -19,6 +19,8 @@ body {
 .container {
     width: 80%;
     margin: auto;
+    border-bottom: 1px solid;
+    padding-bottom: 10px;
 }
 
 .menu ul {
@@ -48,13 +50,13 @@ body {
     transition: 0.6s;
 }
 
-.header {
-    border-bottom: 2px #060af3 solid;
-}
+
+/* section inicial */
 
 .section_banner_inicial {
     display: flex;
-    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
     margin-top: 2%;
 }
 
@@ -70,7 +72,7 @@ body {
 }
 
 .section_banner_inicial .imagem_banner_inicial {
-    width: 50%;
+    width: 80%;
 }
 
 .section_banner_inicial .imagem_banner_inicial img {
@@ -83,7 +85,67 @@ body {
     filter: grayscale(20%);
 }
 
+.section_banner_inicial .texto_banner_inicial img {
+    width: 60px;
+}
 
 section_background {
     background-size: cover;
+}
+
+/* section persona  */
+
+.section_personagens {
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+}
+
+.section_personagens .titulo_personagens {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+}
+
+.section_personagens .titulo_personagens h1 {
+    text-align: center;
+    font-size: 30px;
+    width: 80%;
+    border-bottom: 1px solid;
+    padding-bottom: 20px;
+}
+
+.section_personagens .caixa_campeoes_total {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.section_personagens .caixa_campeoes_total .caixa_campeoes {
+    width: 250px;
+    height: 75%;
+    padding: 1%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 3px solid;
+    transition: 0.5s;
+    box-shadow: 13px 5px 9px;
+    background-color: darkslateblue;
+}
+
+.section_personagens .caixa_campeoes_total .caixa_campeoes p {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section_personagens .caixa_campeoes_total .caixa_campeoes {
+    font-size: 13px;
+}
+
+.section_personagens .caixa_campeoes_total .caixa_campeoes :hover {
+    font-weight: 600;
+    font-size: 15px;
+    transition: 0.4s;
 }
