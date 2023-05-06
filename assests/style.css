@@ -1,9 +1,8 @@
 :root {
-    --background-modal-cadastro: rgb(0,0,0);
+    --background-modal-cadastro: #474e5d;
     --background-modal-cadastro2: rgba(0,0,0,4);
     --background-conteudo-cadastro: #fefefe;
-    --color-botao-fechar: #aaa;
-    --background-color-header-modal: #2552e4;
+    --background-color-botao-cadastro:  #e2e615f5;
 }
 
 body {
@@ -11,6 +10,8 @@ body {
     margin: 0;
     font-family: 'Times New Roman', Times, serif;
 }
+
+* {box-sizing: border-box;}
 
 body {
     background-image: url(img/ceu-estrelado-com-nebulosa_104785-439.avif);
@@ -58,57 +59,110 @@ body {
     transition: 0.6s;
 } 
 
-.modal_cadastro {
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+  }
+  
+  input[type=text]:focus, input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+  }
+  
+  button {
+    background-color: var(--background-color-botao-cadastro);
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+  }
+  
+  button:hover {
+    opacity:1;
+  }
+  
+  .cancelbtn {
+    padding: 14px 20px;
+    background-color: #f44336;
+  }
+  
+
+  .cancelbtn, .signupbtn {
+    float: left;
+    width: 50%;
+  }
+  
+  .container_cadastro {
+    padding: 16px;
+  }
+  
+  .modal_cadastro {
     display: none;
-    position: fixed;
+    position: fixed; 
     z-index: 1;
     left: 0;
     top: 0;
-    width: 100%;
+    width: 100%; 
     height: 100%;
     overflow: auto;
     background-color: var(--background-modal-cadastro);
-    background-color: var(--background-modal-cadastro2);
-}
-
-.modal_cadastro_header {
-    padding: 2px 16px;
-    background-color: var(--background-color-header-modal);
-}
-
-.modal_cadastro_body {
-    padding: 2px 16px;
-}
-
-.cadastro_conteudo {
+    padding-top: 50px;
+  }
+  
+  .cadastro-conteudo {
     background-color: var(--background-conteudo-cadastro);
-    position: relative;
-    margin: auto;
-    padding: 0;
+    margin: 5% auto 15% auto; 
     border: 1px solid #888;
-    width: 80%;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,2), 0 6px 20px 0 rgba(0,0,0,19);
-    animation-name: animatetop;
-    animation-duration: 0.5s;
-}
+    width: 80%; 
+    animation-name: animationtop;
+    animation-duration: 0.8s;
+  }
+  
 
-@keyframes animatetop {
+  hr {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 25px;
+  }
+   
+
+  .close {
+    position: absolute;
+    right: 35px;
+    top: 15px;
+    font-size: 40px;
+    font-weight: bold;
+    color: #f1f1f1;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #f44336;
+    cursor: pointer;
+  }
+  
+
+  .clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  
+  @keyframes animationtop {
     from {top: -300px; opacity: 0;}
     to {top: 0; opacity: 1;}
-}
-
-.close {
-    color: var(--color-botao-fechar);
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
-
-.clode :hover{
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-}
+  }
+  @media screen and (max-width: 300px) {
+    .cancelbtn, .signupbtn {
+       width: 100%;
+    }
+  }
 
 /* section inicial */
 
@@ -193,18 +247,16 @@ section_background {
     background-color: darkslateblue;
 }
 
-.section_personagens .caixa_campeoes_total .caixa_campeoes p {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
 
 .section_personagens .caixa_campeoes_total .caixa_campeoes {
-    font-size: 13px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
 }
 
 .section_personagens .caixa_campeoes_total .caixa_campeoes :hover {
-    font-weight: 600;
-    font-size: 15px;
-    transition: 0.4s;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.container_campeoes {
+    padding: 2px 16px;
 }

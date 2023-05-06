@@ -15,26 +15,42 @@
             <div class="container">
                 <ul>
                     <li><a href=""><img src="assests/img/mt_targon_emblem.png" style="width: 100px;" alt=""></a></li>
-                    <li><button id="cadastro">cadastro</button></li>
+                    <li><button onclick="document.getElementById('cadastro').style.display='block'" >Cadastrar-se</button>
+
                 </ul>
             </div>
         </nav>
     </header>
-    <div id="myModal_cadastro" class="modal_cadastro">
-        <div class="cadastro_conteudo">
-            <div class="modal_cadastro_header">
-                <span class="close">&times</span>
-                <h2>Registre-se</h2>
+    <div id="cadastro" class="modal_cadastro">
+        <span onclick="document.getElementById('cadastro').style.display='none'" class="close" title="Close Modal">&times;</span>
+        <form class="cadastro-conteudo" action="/action_page.php">
+          <div class="container_cadastro">
+            <h1>Cadastrar-se</h1>
+            <p>Por favor preencha todos os campos</p>
+            <hr>
+            <label for="email"><b>Email</b></label>
+            <input type="text" placeholder="Enter Email" name="email" required>
+      
+            <label for="senha"><b>Senha</b></label>
+            <input type="password" placeholder="Enter Password" name="Senha" required>
+      
+            <label for="psw-repeat"><b>Repita a senha</b></label>
+            <input type="password" placeholder="Repita a senha" name="psw-repeat" required>
+            
+            <label>
+              <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+            </label>
+      
+            <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+      
+            <div class="clearfix">
+              <button type="button" onclick="document.getElementById('cadastro').style.display='none'" class="cancelbtn">Cancelar</button>
+              <button type="submit" class="signupbtn">Sign Up</button>
             </div>
-            <div class="modal_cadastro_conteudo">
-                <p>texto do centro</p>
-                <p>outro texto</p>
-            </div>
-            <!-- <div class="modal_cadastro_footer">
-
-            </div> -->
-        </div>
-    </div>
+          </div>
+        </form>
+      </div>
+      
     <section class="section_banner_inicial">
         <div class="imagem_banner_inicial">
             <img src="assests/img/gxgwxi0k7kogmqjmfocd.webp">
@@ -68,39 +84,63 @@
         <div>
             <div class="caixa_campeoes_total">
                 <div class="caixa_campeoes">
-                    <img src="assests/img/Campeos/aphelios.jpg" alt="">
-                    <p><b>Aphelios</b><br>A arma dos devotos</p>
+                    <img src="assests/img/Campeos/aphelios.jpg" alt="avatar">
+                    <div class="container_campeoes">
+                        <h4><b>Aphelios</b></h4>
+                        <p>A arma dos devotos</p>
+                    </div>
                 </div>
                 <div class="caixa_campeoes">
-                    <img src="assests/img/Campeos/aurelion sol.jpg" alt="">
-                    <p><b>Aurelion Sol</b><br>O forjador de estrelas</p>
+                    <img src="assests/img/Campeos/aurelion sol.jpg" alt="avatar">
+                    <div class="container_campeoes">
+                        <h4><b>Aurelion Sol</b></h4>
+                        <p>O forjador de estrelas</p>
+                    </div>
                 </div>
                 <div class="caixa_campeoes">
-                    <img src="assests/img/Campeos/Diana.jpg" alt="">
-                    <p><b>Diana</b><br> O escárnio da lua</p>
+                    <img src="assests/img/Campeos/Diana.jpg" alt="avatar">
+                    <div class="container_campeoes">
+                        <h4><b>Diana</b></h4>
+                        <p>O escárnio da lua</p>
+                    </div>
                 </div>
                 <div class="caixa_campeoes">
-                    <img src="assests/img/Campeos/Leona_0.jpg" alt="">
-                    <p><b>Leona</b><br> A alvorada radiante</p>
+                    <img src="assests/img/Campeos/Leona_0.jpg" alt="avatar">
+                    <div class="container_campeoes">
+                        <h4><b>Leona</b></h4>
+                        <p>A alvorada radiante</p>
+                    </div>
                 </div>
             </div>
             <br><br>
             <div class="caixa_campeoes_total">
                 <div class="caixa_campeoes">
-                    <img src="assests/img/Campeos/download (1).jpg" alt="">
-                    <p><b>Pantheon</b><br>A lança indestrutível</p>
+                    <img src="assests/img/Campeos/download (1).jpg" alt="avatar">
+                    <div class="container_campeoes">
+                        <h4><b>Pantheon</b></h4>
+                        <p>lança indestrutível</p>
+                    </div>
                 </div>
                 <div class="caixa_campeoes">
                     <img src="assests/img/Campeos/Soraka_0.jpg" alt="">
-                    <p><b>Soraka</b><br>A filha das estrelas</p>
+                    <div class="container_campeoes">
+                        <h4><b>Soraka</b></h4>
+                        <p>A filha das estrelas</p>
+                    </div>
                 </div>
                 <div class="caixa_campeoes">
-                    <img src="assests/img/Campeos/Taric_0.jpg" alt="">
-                    <p><b>Taric</b><br>O escudo de valoran</p>
+                    <img src="assests/img/Campeos/Taric_0.jpg" alt="avatar">
+                    <div class="container_campeoes">
+                        <h4><b>Taric</b></h4>
+                        <p>O escudo de valoran</p>
+                    </div>
                 </div>
                 <div class="caixa_campeoes">
-                    <img src="assests/img/Campeos/Zoe_0.jpg" alt="">
-                    <p><b>Zoe</b><br> O aspecto do Crepúsculo</p>
+                    <img src="assests/img/Campeos/Zoe_0.jpg" alt="avatar">
+                    <div class="container_campeoes">
+                        <h4><b>Zoe</b></h4>
+                        <p>O aspecto do Crepúsculo</p>
+                    </div>
                 </div>
 
             </div>
