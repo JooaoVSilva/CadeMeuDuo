@@ -1,3 +1,11 @@
+:root {
+    --background-modal-cadastro: rgb(0,0,0);
+    --background-modal-cadastro2: rgba(0,0,0,4);
+    --background-conteudo-cadastro: #fefefe;
+    --color-botao-fechar: #aaa;
+    --background-color-header-modal: #2552e4;
+}
+
 body {
     padding: 0;
     margin: 0;
@@ -25,10 +33,10 @@ body {
 
 .menu ul {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     list-style: none;
-    border-bottom: var(--borda_color_tm_light) solid 2px;
+    border-bottom:solid 2px;
     padding: 10px;
     height: 60px;
     font-weight: 400;
@@ -48,8 +56,59 @@ body {
 .menu ul li:hover {
     font-size: 20px;
     transition: 0.6s;
+} 
+
+.modal_cadastro {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: var(--background-modal-cadastro);
+    background-color: var(--background-modal-cadastro2);
 }
 
+.modal_cadastro_header {
+    padding: 2px 16px;
+    background-color: var(--background-color-header-modal);
+}
+
+.modal_cadastro_body {
+    padding: 2px 16px;
+}
+
+.cadastro_conteudo {
+    background-color: var(--background-conteudo-cadastro);
+    position: relative;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,2), 0 6px 20px 0 rgba(0,0,0,19);
+    animation-name: animatetop;
+    animation-duration: 0.5s;
+}
+
+@keyframes animatetop {
+    from {top: -300px; opacity: 0;}
+    to {top: 0; opacity: 1;}
+}
+
+.close {
+    color: var(--color-botao-fechar);
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.clode :hover{
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
 
 /* section inicial */
 
