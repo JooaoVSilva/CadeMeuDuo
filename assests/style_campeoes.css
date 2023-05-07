@@ -1,0 +1,31 @@
+.section_banner_campeoes {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 2%;
+}
+
+.section_banner_campeoes .section_banner_imagem {
+    width: 80%;
+}
+
+.section_banner_campeoes .section_banner_imagem img {
+    height: 400px;
+    width: 100%;
+    border: 3px solid;
+    border-radius: 100px;
+    border-top-left-radius: 100px;
+    border-bottom-right-radius: 100px;
+    filter: grayscale(20%);
+}
+
+.section_banner_campeoes .texto_banner_campeoes {
+    padding-left: 2px;
+    font-size: 20px;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}

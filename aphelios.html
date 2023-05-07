@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assests/style.css">
+    <link rel="stylesheet" href="assests/style_campeoes.css">
+</head>
+<body>
+    <header>
+        <nav class="menu">
+            <div class="container">
+                <ul>
+                    <li><a href=""><img src="assests/img/mt_targon_emblem.png" style="width: 100px;" alt=""></a></li>
+                    <li><button
+                            onclick="document.getElementById('cadastro').style.display='block'">Cadastrar-se</button>
+
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div id="cadastro" class="modal_cadastro">
+        <span onclick="document.getElementById('cadastro').style.display='none'" class="close"
+            title="Close Modal">&times;</span>
+        <form class="cadastro-conteudo" action="/action_page.php">
+            <div class="container_cadastro">
+                <h1>Cadastrar-se</h1>
+                <p>Por favor preencha todos os campos</p>
+                <hr>
+                <label for="email"><b>Email</b></label>
+                <input type="text" placeholder="Insira um Email" name="email" required>
+
+                <label for="senha"><b>Senha</b></label>
+                <input type="password" placeholder="Enter Password" name="Senha" required>
+
+                <label for="psw-repeat"><b>Repita a senha</b></label>
+                <input type="password" placeholder="Repita a senha" name="psw-repeat" required>
+
+                <label>
+                    <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+                </label>
+
+                <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+
+                <div class="clearfix">
+                    <button type="button" onclick="document.getElementById('cadastro').style.display='none'"
+                        class="cancelbtn">Cancelar</button>
+                    <button type="submit" class="signupbtn">Sign Up</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <section class="section_banner_campeoes">
+        <div class="section_banner_imagem">
+            <img src="assests/img/Campeos/aphelios.jpg" alt="">
+        </div>
+
+        <div class="texto_banner_campeoes">
+            <h1>Aphelios</h1><br>
+            <p> 
+                Emergindo da sombra do luar com suas armas em mãos, Aphelios abate os inimigos de sua fé em absoluto silêncio, comunicando-se apenas pela destreza de sua mira e o disparo de cada arma. Embora viva sob o efeito de um veneno que o emudeceu, ele é guiado por sua irmã Alune, que habita um santuário distante de onde invoca um arsenal de armas de pedra da lua para ajudá-lo. Enquanto a Lua brilhar no céu, Aphelios nunca estará sozinho..</p>
+
+        </div>
+
+    </section>
+    
+</body>
+</html>
+
+<script src="assests/index.js"></script>
