@@ -13,7 +13,7 @@
         <nav class="menu">
             <div class="container">
                 <ul>
-                    <li><a href=""><img src="assests/img/mt_targon_emblem.png" style="width: 100px;" alt=""></a></li>
+                    <li><a href="index.html"><img src="assests/img/mt_targon_emblem.png" style="width: 100px;" alt=""></a></li>
                     <li><button
                             onclick="document.getElementById('cadastro').style.display='block'">Cadastrar-se</button>
 
@@ -60,9 +60,11 @@
 
         <div class="texto_banner_campeoes">
             <h1>Aphelios</h1><br>
-            <p> 
+            <p id="aphelios_introducao"> 
                 Emergindo da sombra do luar com suas armas em mãos, Aphelios abate os inimigos de sua fé em absoluto silêncio, comunicando-se apenas pela destreza de sua mira e o disparo de cada arma. Embora viva sob o efeito de um veneno que o emudeceu, ele é guiado por sua irmã Alune, que habita um santuário distante de onde invoca um arsenal de armas de pedra da lua para ajudá-lo. Enquanto a Lua brilhar no céu, Aphelios nunca estará sozinho..</p>
-
+                <span id="LerMais_aphelios" onclick=" LerMais_Aphelios().style.display='block'" class="btn_lerMais">Ler Mais</span>
+                <div id="aphelios_lerMais"></div>
+                <span id="LerMenos_aphelios" onclick="LerMenos_Aphelios().style.display='none'">Ler Menos</span>
         </div>
 
     </section>
@@ -71,3 +73,4 @@
 </html>
 
 <script src="assests/index.js"></script>
+<script src="assests/script_campeoes.js"></script>

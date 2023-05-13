@@ -247,6 +247,10 @@ section_background {
     background-color: darkslateblue;
 }
 
+.section_personagens .caixa_campeoes_total .caixa_campeoes img {
+  width: 220px;
+  height: 75%;
+}
 
 .section_personagens .caixa_campeoes_total .caixa_campeoes {
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
