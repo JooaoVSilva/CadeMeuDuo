@@ -73,7 +73,7 @@ input[type=text], input[type=password] {
     outline: none;
   }
   
-  button {
+  .signupbtn {
     background-color: var(--background-color-botao-cadastro);
     color: white;
     padding: 14px 20px;

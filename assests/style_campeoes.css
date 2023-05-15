@@ -30,14 +30,14 @@
     color: white;
 }
 
-.section_banner_campeoes .texto_banner_campeoes .btn_lerMais{
+.section_banner_campeoes .texto_banner_campeoes #maisTexto {
+    display: none;
+}
+
+.section_banner_campeoes .texto_banner_campeoes #btnLerMais{
     right: 35px;
     top: 15px;
     font-size: 40px;
     font-weight: bold;
     color: #f1f1f1;
-}
-
-.section_banner_campeoes .texto_banner_campeoes .btn_lerMais:hover{
-    cursor: pointer;
 }
