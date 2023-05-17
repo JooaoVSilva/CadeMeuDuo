@@ -1,11 +1,19 @@
+var NicknameVar = "";
+var emailVar = "";
+var senhaVar = "";
+var Varchampion_fav = "";
+
 
 function cadastro(){
-    var Nickname = input_nickmane.value;
-    var email = input_email.value;
-    var senha = input_Senha.value;
-    var repest_Senha = psw-repeat.value;
+    NicknameVar += input_nickmane.value;
+    emailVar += input_email.value;
+    senhaVar += input_Senha.value;
+    Varchampion_fav += champion_fav.value;
+}
 
-    if (email.indexOf() < 0){
-        
-    }
+function Limpar(){
+    input_nickmane.value = "";
+    input_email.value = "";
+    input_Senha.value = "";
+    psw_repeat.value = "";
 }

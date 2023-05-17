@@ -14,22 +14,20 @@ body {
 * {box-sizing: border-box;}
 
 body {
-    background-image: url();
-    background-position: right;
+    background-image: url(../assets/img/ceu-estrelado-com-nebulosa_104785-439.avif);
     background-size: cover;
+    background-position: right;
 }
 
 .menu {
     transition: 0.6s;
-    background-color: black;
+    /* background-color: black; */
     display: flex;
 }
 
 .container {
     width: 80%;
     margin: auto;
-    border-bottom: 1px solid;
-    padding-bottom: 10px;
 }
 
 .menu ul {
@@ -37,7 +35,6 @@ body {
     justify-content: space-between;
     align-items: center;
     list-style: none;
-    border-bottom:solid 2px;
     padding: 10px;
     height: 60px;
     font-weight: 400;
@@ -207,7 +204,11 @@ section_background {
 }
 
 /* section persona  */
-
+/* 
+.section_personagens{
+  background-color: #888;
+  background-position: 100%;
+} */
 .section_personagens {
     display: flex;
     flex-direction: column;

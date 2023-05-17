@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.5/dist/sweetalert2.min.css">
     <link rel="stylesheet" href="css/style.css">
     <title>Cadastro</title>
 </head>
@@ -20,7 +21,7 @@
         </nav>
     </header>
     <div id="cadastro" class="">
-        <form class="cadastro-conteudo" action="/action_page.php">
+        <form class="cadastro-conteudo" >
             <div class="container_cadastro">
                 <h1>Cadastrar-se</h1>
                 <p>Por favor preencha todos os campos</p>
@@ -34,8 +35,18 @@
                 <label for="senha"><b>Senha</b></label>
                 <input type="password" placeholder="Enter Password" id="input_Senha" required>
 
-                <label for="psw-repeat"><b>Repita a senha</b></label>
-                <input type="password" placeholder="Repita a senha" id="psw-repeat" required>
+                <label for="champ_fav"><b>Campeão favorito</b></label>
+                <select id="champion_fav" required>
+                    <option value="">Selecione um Campeão</option>
+                    <option> Aphelios </option>
+                    <option> Aurelion Sol</option>
+                    <option> Diana </option>
+                    <option> Leona </option>
+                    <option> Pantheon </option>
+                    <option> Soraka Sol</option>
+                    <option> Taric </option>
+                    <option> Zoe </option>
+                </select><hr>
 
                 <label>
                     <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
@@ -44,9 +55,9 @@
                 <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
 
                 <div class="clearfix">
-                    <button type="button" onclick="document.getElementById('cadastro').style.display='none'"
+                    <button type="button" onclick="Limpar()"
                         class="cancelbtn">Cancelar</button>
-                    <button onclick="cadastro()" type="submit" class="signupbtn">Sign Up</button>
+                    <button onclick="cadastro()" class="signupbtn">Sign Up</button>
                 </div>
             </div>
         </form>
@@ -54,4 +65,5 @@
 </body>
 </html>
 
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.5/dist/sweetalert2.all.min.js"></script>
 <script src="js/cadastro_login.js"></script>
