@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Cadastro</title>
+</head>
+<body>
+    <header>
+        <nav class="menu">
+            <div class="container">
+                <ul>
+                    <li><a href="index.html"><img src="assets/img/mt_targon_emblem.png" style="width: 100px;" alt=""></a></li>
+                    <li><a href="cadastro.html">Cadastro</a></button>
+                    <li><a href="login.html">Login</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div id="cadastro" class="">
+        <form class="cadastro-conteudo" action="/action_page.php">
+            <div class="container_cadastro">
+                <h1>Cadastrar-se</h1>
+                <p>Por favor preencha todos os campos</p>
+                <hr>
+                <label for="nickname"><b>Email</b></label>
+                <input type="text" placeholder="Insira um nick" id="input_nickmane" required>
+
+                <label for="email"><b>Email</b></label>
+                <input type="text" placeholder="Insira um Email" id="input_email" required>
+
+                <label for="senha"><b>Senha</b></label>
+                <input type="password" placeholder="Enter Password" id="input_Senha" required>
+
+                <label for="psw-repeat"><b>Repita a senha</b></label>
+                <input type="password" placeholder="Repita a senha" id="psw-repeat" required>
+
+                <label>
+                    <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+                </label>
+
+                <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+
+                <div class="clearfix">
+                    <button type="button" onclick="document.getElementById('cadastro').style.display='none'"
+                        class="cancelbtn">Cancelar</button>
+                    <button onclick="cadastro()" type="submit" class="signupbtn">Sign Up</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
+
+<script src="js/cadastro_login.js"></script>

@@ -31,7 +31,7 @@ Insert into titulo values
 
 Create table usuario (
 idUsuario int primary key auto_increment,
-Nome varchar(45), 
+Nickname varchar(45), 
 Email varchar(45),
 Senha varchar(50),
 CampeaoFavorito int,
