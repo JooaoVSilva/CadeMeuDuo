@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assests/style.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>login</title>
 </head>
 <body>
@@ -12,41 +12,35 @@
         <nav class="menu">
             <div class="container">
                 <ul>
-                    <li><a href="index.html"><img src="assests/img/mt_targon_emblem.png" style="width: 100px;" alt=""></a></li>
+                    <li><a href="index.html"><img src="assets/img/mt_targon_emblem.png" style="width: 100px;" alt=""></a></li>
                     <li><a href="cadastro.html">Cadastro</a></button>
                     <li><a href="login.html">Login</a></li>
                 </ul>
             </div>
         </nav>
     </header>
-    <div id="cadastro" class="">
-        <form class="cadastro-conteudo" action="/action_page.php">
+    <div id="cadastro" class="cadastro-conteudo">
             <div class="container_cadastro">
                 <h1>Login</h1>
                 <p>Por favor preencha todos os campos</p>
                 <hr>
                 <label for="email"><b>Email</b></label>
-                <input type="text" placeholder="Insira um Email" name="email" required>
+                <input type="text" placeholder="Insira um Email" id="email_input" required>
 
                 <label for="senha"><b>Senha</b></label>
-                <input type="password" placeholder="Enter Password" name="Senha" required>
+                <input type="password" placeholder="Enter Password" id="Senha_input" required>
 
                 <label for="psw-repeat"><b>Repita a senha</b></label>
-                <input type="password" placeholder="Repita a senha" name="psw-repeat" required>
-
-                <label>
-                    <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
-                </label>
-
-                <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+                <input type="password" placeholder="Repita a senha" id="psw_repeat" required>
 
                 <div class="clearfix">
-                    <button type="button" onclick="document.getElementById('cadastro').style.display='none'"
-                        class="cancelbtn">Cancelar</button>
-                    <button type="submit" class="signupbtn">Sign Up</button>
+                    <button type="button" onclick="Limpar()"
+                    class="cancelbtn">Cancelar</button>s
+                    <button onclick="entrar()" class="signupbtn">Login</button>
                 </div>
             </div>
-        </form>
     </div>
 </body>
 </html>
+
+<script src="js/cadastro_login.js"></script>

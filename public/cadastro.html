@@ -20,13 +20,12 @@
             </div>
         </nav>
     </header>
-    <div id="cadastro" class="">
-        <form class="cadastro-conteudo" >
+    <div id="cadastro" class="cadastro-conteudo">
             <div class="container_cadastro">
                 <h1>Cadastrar-se</h1>
                 <p>Por favor preencha todos os campos</p>
                 <hr>
-                <label for="nickname"><b>Email</b></label>
+                <label for="nickname"><b>Nickname</b></label>
                 <input type="text" placeholder="Insira um nick" id="input_nickmane" required>
 
                 <label for="email"><b>Email</b></label>
@@ -38,14 +37,14 @@
                 <label for="champ_fav"><b>Campeão favorito</b></label>
                 <select id="champion_fav" required>
                     <option value="">Selecione um Campeão</option>
-                    <option> Aphelios </option>
-                    <option> Aurelion Sol</option>
-                    <option> Diana </option>
-                    <option> Leona </option>
-                    <option> Pantheon </option>
-                    <option> Soraka Sol</option>
-                    <option> Taric </option>
-                    <option> Zoe </option>
+                    <option value="Aphelios"> Aphelios </option>
+                    <option value="Aurelion Sol"> Aurelion Sol</option>
+                    <option value="Diana"> Diana </option>
+                    <option value="Leona"> Leona </option>
+                    <option value="Pantheon"> Pantheon </option>
+                    <option value="Soraka"> Soraka</option>
+                    <option value="Taric"> Taric </option>
+                    <option value="Zoe"> Zoe </option>
                 </select><hr>
 
                 <label>
@@ -60,7 +59,6 @@
                     <button onclick="cadastro()" class="signupbtn">Sign Up</button>
                 </div>
             </div>
-        </form>
     </div>
 </body>
 </html>
