@@ -27,13 +27,13 @@ body {
   margin: auto;
 }
 
-.container .usuario_opcao{
-display: flex;
-justify-content: space-around;
-align-items: center;
+.container .usuario_opcao {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
-.usuario_opcao  li{
+.usuario_opcao li {
   margin-right: 50px;
 }
 
@@ -49,7 +49,7 @@ align-items: center;
 
 .menu ul li {
   font-size: 15px;
-  
+
   transition: 0.6s;
   color: aliceblue;
 }
@@ -63,7 +63,13 @@ align-items: center;
   font-size: 20px;
   transition: 0.6s;
 }
- /* cadastro conteudo  */
+
+/* cadastro conteudo  */
+
+.body_cadastrologin {
+  background-image: url(../assets/img/ceu-estrelado-com-nebulosa_104785-439.avif);
+  background-size: cover;
+}
 
 input[type=text],
 input[type=password] {
@@ -184,7 +190,7 @@ hr {
 }
 
 /* section inicial */
-.section_banner_inicial{
+.section_banner_inicial {
   background-image: url(../assets/img/ceu-estrelado-com-nebulosa_104785-439.avif);
   background-size: cover;
 }
@@ -231,10 +237,11 @@ section_background {
 
 /* section persona  */
 
-.section_personagens{
- background-image: url(../assets/img/background_campeoes.jpg);
- background-size: cover;
+.section_personagens {
+  background-image: url(../assets/img/background_campeoes.jpg);
+  background-size: cover;
 }
+
 .section_personagens {
   display: flex;
   flex-direction: column;

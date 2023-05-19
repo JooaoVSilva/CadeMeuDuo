@@ -8,7 +8,7 @@ function Limpar(){
     input_nickmane.value = "";
     input_email.value = "";
     input_Senha.value = "";
-    psw_repeat.value = "";
+    champion_fav.value = "";
 }
 
 function cadastro() {
@@ -16,13 +16,17 @@ function cadastro() {
 
     //Recupere o valor da nova input pelo nome do id
     // Agora vá para o método fetch logo abaixo
-    NicknameVar += input_nickmane.value;
-    emailVar += input_email.value;
-    senhaVar += input_Senha.value;
-    Varchampion_fav += champion_fav.value;
+    NicknameVar = input_nickmane.value;
+    emailVar = input_email.value;
+    senhaVar = input_Senha.value;
+    Varchampion_fav = champion_fav.value;
     
     if (NicknameVar == "" || emailVar == "" || senhaVar == ""|| Varchampion_fav == ""){
-        alert("Preencha todos os campos")
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Por favor preencha todos os campos',
+          })
         return false;
     }
     // Enviando o valor da nova input
@@ -43,7 +47,11 @@ function cadastro() {
         console.log("resposta: ", resposta);
 
         if (resposta.ok) {
-
+            Swal.fire({
+                icon: 'success',
+                title: 'Cadastro Efetuado',
+                text: 'cadastro feito com exito',
+            })
             setTimeout(() => {
             window.location = "login.html";
            }, "2000")
