@@ -205,7 +205,7 @@ hr {
 .section_banner_inicial .texto_banner_inicial {
   padding-left: 2px;
   font-size: 20px;
-  width: 30%;
+  width: 60%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -248,14 +248,14 @@ section_background {
   height: 500px;
 }
 
-.section_personagens .titulo_personagens {
+.titulo_personagens {
   display: flex;
   flex-direction: column;
   align-items: center;
   color: white;
 }
 
-.section_personagens .titulo_personagens h1 {
+.titulo_personagens h1 {
   text-align: center;
   font-size: 30px;
   width: 80%;
@@ -263,38 +263,90 @@ section_background {
   padding-bottom: 20px;
 }
 
-.section_personagens .caixa_campeoes_total {
-  display: flex;
-  justify-content: space-evenly;
+* {box-sizing:border-box}
+
+/* Slideshow container */
+.caixa_campeoes_total{
+  width: 570px;
+  position: relative;
+  margin: auto;
 }
 
-.section_personagens .caixa_campeoes_total .caixa_campeoes {
-  width: 250px;
-  height: 75%;
-  padding: 1%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  border: 3px solid;
-  transition: 0.5s;
-  box-shadow: 13px 5px 9px;
-  background-color: darkslateblue;
+/* Hide the images by default */
+.caixa_campeos {
+  display: none;
 }
 
-.section_personagens .caixa_campeoes_total .caixa_campeoes img {
-  width: 220px;
-  height: 75%;
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
 }
 
-.section_personagens .caixa_campeoes_total .caixa_campeoes {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  transition: 0.3s;
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
 }
 
-.section_personagens .caixa_campeoes_total .caixa_campeoes :hover {
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
 }
 
+/* Caption text */
 .container_campeoes {
-  padding: 2px 16px;
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numero_campeao{
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
 }

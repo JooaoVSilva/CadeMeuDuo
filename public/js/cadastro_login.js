@@ -2,13 +2,14 @@ var NicknameVar = "";
 var emailVar = "";
 var senhaVar = "";
 var Varchampion_fav = "";
-
+var senhaRepeatVar = ""
 
 function Limpar(){
     input_nickmane.value = "";
     input_email.value = "";
     input_Senha.value = "";
     champion_fav.value = "";
+    senhaRepeatVar = "";
 }
 
 function cadastro() {
@@ -19,16 +20,26 @@ function cadastro() {
     NicknameVar = input_nickmane.value;
     emailVar = input_email.value;
     senhaVar = input_Senha.value;
+    senhaRepeatVar = psw_repeat.value;
     Varchampion_fav = champion_fav.value;
+
     
-    if (NicknameVar == "" || emailVar == "" || senhaVar == ""|| Varchampion_fav == ""){
+    if (NicknameVar == "" || emailVar == "" || senhaVar == ""|| Varchampion_fav == ""|| senhaRepeatVar == ""){
         Swal.fire({
             icon: 'error',
             title: 'Oops...',
             text: 'Por favor preencha todos os campos',
           })
         return false;
+    } else if (senhaVar != senhaRepeatVar) {
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Senhas nãos conferem',
+          })
+          return false
     }
+
     // Enviando o valor da nova input
     fetch("/usuarios/cadastrar", {
         method: "POST",
@@ -109,7 +120,7 @@ function entrar() {
                 sessionStorage.ID_USUARIO = json.idUsuario;
 
                 setTimeout(function () {
-                    window.location = "index.html";
+                    window.location = "dashboard/dashboard.html";
                 }, 1000); 
 
             });
