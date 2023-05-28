@@ -6,9 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.5/dist/sweetalert2.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/cadastro_login.css">
     <title>Cadastro</title>
 </head>
-<body class="body_cadastrologin">
+<body>
     <header>
         <nav class="menu">
             <div class="container">
@@ -35,7 +36,10 @@
 
                 <label for="senha"><b>Senha</b></label>
                 <input type="password" placeholder="Enter Password" id="input_Senha" required>
-
+                
+                <label for="psw-repeat"><b>Repita a senha</b></label>
+                <input type="password" placeholder="Repita a senha" id="psw_repeat" required>
+                
                 <label for="champ_fav"><b>Campeão favorito</b></label>
                 <select id="champion_fav" required>
                     <option value="">Selecione um Campeão</option>
