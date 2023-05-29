@@ -1,131 +1,104 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 
 <head>
-    <link rel="shortcut icon" href="../assets/icon/favicon2.ico" type="image/x-icon">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Usuarios/Targon</title>
-
-    <link rel="stylesheet" href="caramico.css">
-    <link rel="stylesheet" href="dashboards.css">
-    <script src="../js/funcoes.js"></script>
-    <script src="./alerta.js"></script>
-
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-
-    <!-- scripts do Chart.js - 2022-1 -->
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
-    <!--FONT AWESOME-->
-    <script src="https://kit.fontawesome.com/9f7414eb10.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="dashboard.css">
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Document</title>
 </head>
 
-<!-- <body onload=" atualizarFeed()"> -->
-
 <body>
+    <nav class="sidebar close">
+        <header>
+            <div class="image-text">
+                <span class="imagem">
+                    <img src="assets/img/sobreProjeto/bandeiraChapeusDePalha.gif" alt="">
+                </span>
 
-    <div class="janela">
-        <div class="header-left">
-            <h1>AquaTech</h1>
+                <div class="text header-text">
+                    <span id="b_usuario" class="name"></span>
+                    <span id="cargoUsuarioPrincipal" class="profession">cargo</span>
 
-            <div class="hello">
-                <h3>Olá, <span id="b_usuario">usuário</span>!</h3>
+                </div>
             </div>
 
-            <div class="btn-nav-white">
-                <a href="./cards.html">
-                    <h3>Aquários</h3>
-                </a>
+            <i class='bx bx-chevron-right toggle'></i>
+        </header>
+
+        <div class="menu-bar">
+            <div class="menu">
+                <ul class="menu-link">
+                    <li class="nav-link">
+                        <span id="dashboardBtn" class="link active ">
+                            <i class='bx bx-home icon'></i>
+                            <span class="text nav-text">dashboard</span>
+
+                        </span>
+                    </li>
+
+                    <li  class="nav-link">
+                        <span id="analyticsBtn" class="link">
+                            <i class='bx bx-pie-chart-alt icon'></i>
+                            <span class="text nav-text">analytics</span>
+
+                        </span>
+                    </li>
+
+
+                </ul>
             </div>
-
-            <div class="btn-nav">
-
-                <h3>Gráficos</h3>
+            <div class="bottom-content">
+                <li class="">
+                    <span id="logout" class="link">
+                        <i class='bx bx-log-out icon'></i>
+                        <span class="text nav-text">Logout</span>
+                    </span>
+                </li>
 
             </div>
-
-            <div class="btn-nav-white">
-                <a href="./mural.html">
-                    <h3>Mural de Avisos</h3>
-                </a>
-            </div>
-
-            <div class="btn-logout" onclick="limparSessao()">
-                <h3>Sair</h3>
-            </div>
-
         </div>
 
-        <div class="dash">
-            <div id="alerta">
-            </div>
+    </nav>
 
-            <div class="btns-dash">
-                <!-- O gráfico é chamado de acordo com o id (fk_aquario) do banco  -->
-                <button class="btn-chart btn-pink" onclick="exibirAquario(1)" id="btnAquario1">Aquario 1</button>
-                <button class="btn-chart btn-white" onclick="exibirAquario(2)" id="btnAquario2">Aquario 2</button>
-                <button class="btn-chart btn-white" onclick="exibirAquario(3)" id="btnAquario3">Aquario 3</button>
-                <button class="btn-chart btn-white" onclick="exibirAquario(4)" id="btnAquario4">Aquario 4</button>
-            </div>
-            <div id="graficos">
-                <div id="grafico1" class="display-block">
-                    <h3 class="tituloGraficos">
-                        <span id="tituloAquario1">123</span>
-                    </h3>
-                    <div class="graph">
-                        <canvas id="myChartCanvas1"></canvas>
-                    </div>
-                    <div class="label-captura">
-                        <p id="avisoCaptura1" style="color: white"></p>
-                    </div>
+    <section id="conteudo" class="home">
+
+        <!-- ? Dashboard -->
+        <div id="dashboard" class="dashboard">
+            Dashboard
+            <div class="graficos">
+
+                <div class="grafico graficoPersonagem">
+
                 </div>
+                <div class="grafico graficoArco">
 
-                <div id="grafico2" class="display-none">
-                    <h3 class="tituloGraficos">
-                        <span id="tituloAquario2"></span>
-                    </h3>
-                    <div class="graph">
-                        <canvas id="myChartCanvas2"></canvas>
-                    </div>
-                    <div class="label-captura">
-                        <p id="avisoCaptura2" style="color: white"></p>
-                    </div>
                 </div>
+                <div class="grafico graficoVisualizacaoU">
 
-                <div id="grafico3" class="display-none">
-                    <h3 class="tituloGraficos">
-                        <span id="tituloAquario3"></span>
-                    </h3>
-                    <div class="graph">
-                        <canvas id="myChartCanvas3"></canvas>
-                    </div>
-                    <div class="label-captura">
-                        <p id="avisoCaptura3" style="color: white"></p>
-                    </div>
-                </div>
-
-                <div id="grafico4" class="display-none">
-                    <h3 class="tituloGraficos">
-                        <span id="tituloAquario4"></span>
-                    </h3>
-                    <div class="graph">
-                        <canvas id="myChartCanvas4"></canvas>
-                    </div>
-                    <div class="label-captura">
-                        <p id="avisoCaptura4" style="color: white"></p>
-                    </div>
                 </div>
             </div>
+
+
+
         </div>
-    </div>
+        <!-- ? Dashboard -->
 
+        <!-- ? Notificações -->
 
+        <!-- ? Notificações -->
+        <!-- ? analytics -->
+
+        <div id="analytics" class="analytics none">
+            Analytics
+            <!-- ? analytics -->
+        </div>
+    </section>
 </body>
 
 </html>
 
-<script src="../js/tela_usuario.js">
- 
-</script>
+<script src="../js/usuario.js"></script>

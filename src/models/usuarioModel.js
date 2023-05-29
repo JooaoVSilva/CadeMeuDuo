@@ -26,7 +26,7 @@ function cadastrar(Nickname, email, senha, champion_fav) {
     //  e na ordem de inserção dos dados.
     var instrucao = `
     insert into usuario  (Nickname, Email, Senha, CampeaoFavorito) values 
-    ('${Nickname}', '${email}', '${senha}', (select idCampeao from campeao where NomeCampeao = '${champion_fav}'));
+    ('${Nickname}', '${email}', '${senha}');
     `;
     console.log("Executando a instrução SQL: \n" + instrucao);
     return database.executar(instrucao);
