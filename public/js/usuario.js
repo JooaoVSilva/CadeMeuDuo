@@ -1,6 +1,6 @@
 
 b_usuario.innerHTML = sessionStorage.NOME_USUARIO
-cargoUsuarioPrincipal.innerHTML = sessionStorage.CARGO_USUARIO
+cargoUsuario.innerHTML = sessionStorage.CARGO_USUARIO
 
 
 var body = document.querySelector("body"),

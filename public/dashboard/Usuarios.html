@@ -6,62 +6,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="../css/style.css">
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <title>Document</title>
 </head>
 
 <body>
-    <nav class="sidebar close">
-        <header>
-            <div class="image-text">
-                <span class="imagem">
-                    <img src="assets/img/sobreProjeto/bandeiraChapeusDePalha.gif" alt="">
-                </span>
-
-                <div class="text header-text">
-                    <span id="b_usuario" class="name"></span>
-                    <span id="cargoUsuarioPrincipal" class="profession">cargo</span>
-
+    <nav class="menu">
+        <div class="container">
+            <ul>
+                <li><span id="b_usuario"></span> <div id="cargoUsuario"></div></li>
+                <div class="usuario_opcao">
+                    <li><a href="">Sobre Mim</a></li>
+                    <li><a href="cadastro.html">Cadastro</a></button>
+                    <li><a href="login.html">Login</a></li>
                 </div>
-            </div>
-
-            <i class='bx bx-chevron-right toggle'></i>
-        </header>
-
-        <div class="menu-bar">
-            <div class="menu">
-                <ul class="menu-link">
-                    <li class="nav-link">
-                        <span id="dashboardBtn" class="link active ">
-                            <i class='bx bx-home icon'></i>
-                            <span class="text nav-text">dashboard</span>
-
-                        </span>
-                    </li>
-
-                    <li  class="nav-link">
-                        <span id="analyticsBtn" class="link">
-                            <i class='bx bx-pie-chart-alt icon'></i>
-                            <span class="text nav-text">analytics</span>
-
-                        </span>
-                    </li>
-
-
-                </ul>
-            </div>
-            <div class="bottom-content">
-                <li class="">
-                    <span id="logout" class="link">
-                        <i class='bx bx-log-out icon'></i>
-                        <span class="text nav-text">Logout</span>
-                    </span>
-                </li>
-
-            </div>
+            </ul>
         </div>
-
     </nav>
 
     <section id="conteudo" class="home">
@@ -102,3 +64,5 @@
 </html>
 
 <script src="../js/usuario.js"></script>
+
+<!-- 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 -->
