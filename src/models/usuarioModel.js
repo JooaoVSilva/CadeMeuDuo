@@ -25,7 +25,7 @@ function cadastrar(Nickname, email, senha, champion_fav) {
     // Insira exatamente a query do banco aqui, lembrando da nomenclatura exata nos valores
     //  e na ordem de inserção dos dados.
     var instrucao = `
-    insert into usuario  (Nickname, Email, Senha, CampeaoFavorito) values 
+    insert into usuario  (Nickname, Email, Senha) values 
     ('${Nickname}', '${email}', '${senha}');
     `;
     console.log("Executando a instrução SQL: \n" + instrucao);
