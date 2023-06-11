@@ -6,9 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="dashboard.css">
-    <link rel="stylesheet" href="../css/style.css">
-    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <title>Document</title>
 </head>
 
@@ -18,9 +15,8 @@
             <ul>
                 <li><span id="b_usuario"></span> <div id="cargoUsuario"></div></li>
                 <div class="usuario_opcao">
-                    <li><a href="">Sobre Mim</a></li>
-                    <li><a href="cadastro.html">Cadastro</a></button>
-                    <li><a href="login.html">Login</a></li>
+                    <li><button onclick="mudarpaginaquiz()">Quiz</button></li>
+                    <li><button onclick="logout()">Sair</button></li>
                 </div>
             </ul>
         </div>
@@ -30,39 +26,34 @@
 
         <!-- ? Dashboard -->
         <div id="dashboard" class="dashboard">
-            Dashboard
+            <h1 class="tituloDash">Dashboard</h1>
+            <br><br>
             <div class="graficos">
 
                 <div class="grafico graficoPersonagem">
+                    <h6>Campeões favorito</h6>
+                    <div id="grafico1" class="caixa_grafico">
 
+
+                    <canvas id="myChartCanvas1"></canvas>
+                    </div>
                 </div>
-                <div class="grafico graficoArco">
+                <div class="grafico graficoPersonagem">
+                    <h6>Titulos usuarios</h6>
+                    <div id="grafico2" class="caixa_grafico">
 
-                </div>
-                <div class="grafico graficoVisualizacaoU">
-
+                    <canvas id="myChartCanvas2"></canvas>
                 </div>
             </div>
 
 
-
+            <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
         </div>
-        <!-- ? Dashboard -->
 
-        <!-- ? Notificações -->
-
-        <!-- ? Notificações -->
-        <!-- ? analytics -->
-
-        <div id="analytics" class="analytics none">
-            Analytics
-            <!-- ? analytics -->
-        </div>
     </section>
 </body>
 
 </html>
 
+<script src="../js/dashboard.js"></script>
 <script src="../js/usuario.js"></script>
-
-<!-- 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 -->

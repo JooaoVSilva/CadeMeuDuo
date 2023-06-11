@@ -1,3 +1,11 @@
+function mudarPaginaCadastro() {
+    window.location = "./cadastro.html"
+  }
+  
+function mudarPaginaLogin(){
+    window.location = "./login.html"
+}
+
 var NicknameVar = "";
 var emailVar = "";
 var senhaVar = "";
@@ -118,6 +126,7 @@ function entrar() {
                 sessionStorage.EMAIL_USUARIO = json.email;
                 sessionStorage.NOME_USUARIO = json.Nickname;
                 sessionStorage.ID_USUARIO = json.idUsuario;
+                sessionStorage.TITULO_USUARIO = json.tituloUsuario;
 
                 setTimeout(function () {
                     window.location = "dashboard/Usuarios.html";

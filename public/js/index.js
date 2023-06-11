@@ -1,3 +1,11 @@
+function mudarPaginaCadastro() {
+  window.location = "./cadastro.html"
+}
+
+function mudarPaginaLogin(){
+  window.location = "./login.html"
+}
+
 let slideIndex = 1;
 showSlides(slideIndex);
 

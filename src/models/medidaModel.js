@@ -61,8 +61,45 @@ function buscarMedidasEmTempoReal(idAquario) {
     return database.executar(instrucaoSql);
 }
 
+function buscarTotalMedidaPersonagemF() {
+
+    instrucaoSql = ''
+
+    if (process.env.AMBIENTE_PROCESSO == "producao") {
+        instrucaoSql = `select count(CampeaoFavorito), campeao.nomeCampeao from usuario join campeao on CampeaoFavorito = idCampeao group by campeaoFavorito;`;
+
+    } else if (process.env.AMBIENTE_PROCESSO == "desenvolvimento") {
+        instrucaoSql = `select count(CampeaoFavorito) as cmpF, campeao.nomeCampeao from usuario join campeao on CampeaoFavorito = idCampeao group by campeaoFavorito;`;
+    } else {
+        console.log("\nO AMBIENTE (produção OU desenvolvimento) NÃO FOI DEFINIDO EM app.js\n");
+        return
+    }
+
+    console.log("Executando a instrução SQL: \n" + instrucaoSql);
+    return database.executar(instrucaoSql);
+}
+
+function listarUsuario() {
+
+    instrucaoSql = ''
+
+    if (process.env.AMBIENTE_PROCESSO == "producao") {
+        instrucaoSql = `select count(tituloUsuario), titulo.tituloNome from usuario join titulo on tituloUsuario = tituloNome group by tituloUsuario;`;
+
+    } else if (process.env.AMBIENTE_PROCESSO == "desenvolvimento") {
+        instrucaoSql = `select count(tituloUsuario) as titU, titulo.tituloNome from usuario join titulo on tituloUsuario = tituloNome group by tituloUsuario;`;
+    } else {
+        console.log("\nO AMBIENTE (produção OU desenvolvimento) NÃO FOI DEFINIDO EM app.js\n");
+        return
+    }
+
+    console.log("Executando a instrução SQL: \n" + instrucaoSql);
+    return database.executar(instrucaoSql);
+}
 
 module.exports = {
     buscarUltimasMedidas,
-    buscarMedidasEmTempoReal
+    buscarMedidasEmTempoReal,
+    buscarTotalMedidaPersonagemF,
+    listarUsuario
 }

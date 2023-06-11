@@ -5,11 +5,6 @@
     margin-top: 2%;
 }
 
-.section_banner_campeoes{
-    background-image: url(../assets/img/ceu-estrelado-com-nebulosa_104785-439.avif);
-    background-size: cover;
-}
-
 .section_banner_campeoes .section_banner_imagem {
     width: 80%;
 }
@@ -45,4 +40,25 @@
     font-size: 40px;
     font-weight: bold;
     color: #f1f1f1;
+}
+
+/* section videos extras */
+
+.section_historia_auxiliar{
+    background-image: url(../assets/img/background_campeoes.jpg);
+    background-size: cover;
+}
+
+.section_historia_auxiliar {
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+}
+
+.section_historia_auxiliar .videos{
+    display: flex;
+    flex-direction: inline;
+    justify-content: center;
+    align-items: center;
+    top: 120px;
 }

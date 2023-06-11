@@ -1,58 +1,16 @@
 
 b_usuario.innerHTML = sessionStorage.NOME_USUARIO
-cargoUsuario.innerHTML = sessionStorage.CARGO_USUARIO
+cargoUsuario.innerHTML = sessionStorage.TITULO_USUARIO
 
+function mudarpaginaquiz() {
+    window.location = "./quiz.html"
+}
 
-var body = document.querySelector("body"),
-    sidebar = body.querySelector(".sidebar"),
-    toggle = body.querySelector(".toggle"),
-    modeSwtich = body.querySelector(".toggle-switch"),
-    modeText = body.querySelector(".mode-text");
+function mudarpaginadash(){
+    window.location = "./Usuarios.html"
+}
 
-toggle.addEventListener("click", () => {
-    sidebar.classList.toggle("close");
-});
-
-var dashboardBtn = document.getElementById("dashboardBtn")
-dashboardBtn.addEventListener('click', () => {
-    dashboard.classList.remove('none')
-    dashboardBtn.classList.add('active')
-
-    notificacoes.classList.add('none')
-    analytics.classList.add('none')
-    notificacoesBtn.classList.remove('active')
-    analyticsBtn.classList.remove('active')
-})
-
-
-
-var notificacoesBtn = document.getElementById("notificacoesBtn")
-notificacoesBtn.addEventListener('click', () => {
-    notificacoes.classList.remove('none')
-    notificacoesBtn.classList.add('active')
-
-
-    dashboard.classList.add('none')
-    analytics.classList.add('none')
-    dashboardBtn.classList.remove('active')
-    analyticsBtn.classList.remove('active')
-})
-
-var analyticsBtn = document.getElementById("analyticsBtn")
-analyticsBtn.addEventListener('click', () => {
-    analytics.classList.remove('none')
-    analyticsBtn.classList.add('active')
-
-
-
-    dashboard.classList.add('none')
-    notificacoes.classList.add('none')
-    dashboardBtn.classList.remove('active')
-    notificacoes.classList.remove('active')
-})
-
-var logout = document.getElementById('logout')
-logout.addEventListener('click', () => {
+function logout(){
     sessionStorage.clear();
-    window.location = "index.html";
-})
+    window.location = "../index.html";
+}
