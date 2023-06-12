@@ -29,7 +29,7 @@ const q0 = {
 
 const q1 = {
     numQuestao   : 1,
-    pergunta     : "Qual a região mais proximo de targon",
+    pergunta     : "Qual a região mais proxima de targon",
     alternativaA : "Shurima",
     alternativaB : "Demacia",
     alternativaC : "Ionia",
@@ -48,10 +48,10 @@ const q2 = {
 const q3 = {
     numQuestao   : 3,
     pergunta     : "Tribo dos campeões Leona e Pantheon",
-    alternativaA : "ra horak",
+    alternativaA : "Rakor",
     alternativaB : "garras do inverno",
     alternativaC : "icathia",
-    correta      : "ra horak",
+    correta      : "Rakor",
 }
 
 const q4 = {
@@ -83,7 +83,7 @@ const q6 = {
 
 const q7 = {
     numQuestao   : 7,
-    pergunta     : "Qual a região inicial de Taric",
+    pergunta     : "Qual a região de nascença de Taric",
     alternativaA : "Ionia",
     alternativaB : "Freljord",
     alternativaC : "Demacia",
@@ -109,7 +109,7 @@ const q9 = {
 
 const q10 = {
     numQuestao   : 10,
-    pergunta     : "dentre a tripo dos ra horak qual o nome da fé seguida ...",
+    pergunta     : "dentre a tripo dos Rakor qual o nome da fé seguida ...",
     alternativaA : "Três irmãs",
     alternativaB : "Lunari",
     alternativaC : "Solari",
