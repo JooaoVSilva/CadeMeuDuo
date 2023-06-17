@@ -16,7 +16,7 @@ function Limpar(){
     input_nickmane.value = "";
     input_email.value = "";
     input_Senha.value = "";
-/*     champion_fav.value = ""; */
+   champion_fav.value = "";
     senhaRepeatVar = "";
 }
 
@@ -29,10 +29,10 @@ function cadastro() {
     emailVar = input_email.value;
     senhaVar = input_Senha.value;
     senhaRepeatVar = psw_repeat.value;
-  /*   Varchampion_fav = champion_fav.value; */
+    Varchampion_fav = champion_fav.value;
 
     
-    if (NicknameVar == "" || emailVar == "" || senhaVar == ""|| /* Varchampion_fav == ""|| */ senhaRepeatVar == ""){
+    if (NicknameVar == "" || emailVar == "" || senhaVar == ""|| Varchampion_fav == ""|| senhaRepeatVar == ""){
         Swal.fire({
             icon: 'error',
             title: 'Oops...',
@@ -58,7 +58,7 @@ function cadastro() {
             NicknameServer:NicknameVar,
             emailServer: emailVar,
             senhaServer: senhaVar,
-  /*           championSever: Varchampion_fav */
+            championSever: Varchampion_fav
         })
 
     }).then(function (resposta) {

@@ -27,6 +27,13 @@ body {
   background-color: rgba(20, 4, 75, 0.986);
 }
 
+.menu button {
+  background-color: goldenrod;
+  width: 100px;
+  height: 40px;
+  border-radius: 10px;
+}
+
 .container {
   background-color: rgba(20, 4, 75, 0.986);
   width: 90%;
@@ -80,15 +87,20 @@ body {
   background: var(--body-color);;
 }
 
+.dashboard .tituloDash{
+  display: flex;
+  justify-content: center;
+}
 .dashboard .graficos{
   display: flex;
   justify-content: space-around;
   width: 100%;
+  height: 200px;
 }
 
 .dashboard .graficos .grafico{
   width: 30%;
-  height: 300px;
+  height: 200px;
   background: var(--primary-color-light);
 }
 

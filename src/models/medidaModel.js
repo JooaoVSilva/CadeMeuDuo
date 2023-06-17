@@ -87,7 +87,7 @@ function listarUsuario() {
         instrucaoSql = `select count(tituloUsuario), titulo.tituloNome from usuario join titulo on tituloUsuario = tituloNome group by tituloUsuario;`;
 
     } else if (process.env.AMBIENTE_PROCESSO == "desenvolvimento") {
-        instrucaoSql = `select count(tituloUsuario) as titU, titulo.tituloNome from usuario join titulo on tituloUsuario = tituloNome group by tituloUsuario;`;
+        instrucaoSql = `select count(tituloUsuario) as titU, titulo.tituloNome as nome from usuario join titulo on tituloUsuario = tituloNome group by tituloUsuario;`;
     } else {
         console.log("\nO AMBIENTE (produção OU desenvolvimento) NÃO FOI DEFINIDO EM app.js\n");
         return

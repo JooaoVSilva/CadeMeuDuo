@@ -65,6 +65,7 @@ function cadastrar(req, res) {
     var Nickname = req.body.NicknameServer;
     var email = req.body.emailServer;
     var senha = req.body.senhaServer;
+    var champion_fav = req.body.championSever; 
 
     // Faça as validações dos valores
     if (Nickname== undefined) {
@@ -73,10 +74,12 @@ function cadastrar(req, res) {
         res.status(400).send("Seu email está undefined!");
     } else if (senha == undefined) {
         res.status(400).send("Sua senha está undefined!");
-    } else {
+    } else if (champion_fav == undefined){
+        res.status(400).send("Seu campeao esta undefined")
+    }else {
         
         // Passe os valores como parâmetro e vá para o arquivo usuarioModel.js
-        usuarioModel.cadastrar(Nickname, email, senha)
+        usuarioModel.cadastrar(Nickname, email, senha, champion_fav)
             .then(
                 function (resultado) {
                     res.json(resultado);

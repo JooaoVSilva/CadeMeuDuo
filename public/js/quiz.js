@@ -205,7 +205,7 @@ function verificarSeAcertou(nQuestao, resposta) {
 function fimDoJogo() {
     instrucoes.textContent = "Fim de Jogo!"
     numQuestao.textContent = ""
-
+   
     let pont = ''
     pontos == 0 ? pont = 'ponto' : pont = 'pontos'
 
@@ -240,6 +240,8 @@ function fimDoJogo() {
             titulo = "Grão-Mestre da lore"
         }
     
+     
+
         fetch("/usuarios/atualizar", {
             method: "POST",
             headers: {
@@ -260,8 +262,9 @@ function fimDoJogo() {
                     console.log(json);
                     console.log(JSON.stringify(json));
 
-                    sessionStorage.TITULO_USUARIO = json.tituloUsuario;
-    
+                 
+
+                   
                     setTimeout(function () {
                         window.location = "dashboard/Usuarios.html";
                     }, 1000); 
@@ -280,7 +283,7 @@ function fimDoJogo() {
         }).catch(function (erro) {
             console.log(erro);
         })
-    
+        
         pontos = 0
         location.reload();
         return false;

@@ -46,15 +46,15 @@ function plotarGraficoP(resposta) {
 
   for (let i = 0; i < resposta.length; i++) {
       const cont = resposta[i];
-      console.log(cont.nome)
-      labelsP.push(cont.nome)
+      console.log(cont.cmpF)
+      labelsP.push(cont.nomeCampeao)
   }
 
 
   let dados = {
       labels: labelsP,
       datasets: [{
-          labels: [resposta.nome],
+          labels: [resposta.cmpF],
           data: [],
           fill: true,
           backgroundColor: [
@@ -74,7 +74,7 @@ function plotarGraficoP(resposta) {
 
   for (i = 0; i < resposta.length; i++) {
       var registro = resposta[i];
-      dados.datasets[0].data.push(registro.qtdP);
+      dados.datasets[0].data.push(registro.cmpF);
 
   }
   const config = {
@@ -134,8 +134,8 @@ function plotarGraficoU(resposta) {
 
   for (let i = 0; i < resposta.length; i++) {
       const cont = resposta[i];
-      console.log(cont.nome)
-      labelsP.push(cont.nome)
+      console.log(cont.titU)
+      labelsP.push(cont.titU)
   }
 
 
@@ -162,7 +162,8 @@ function plotarGraficoU(resposta) {
 
   for (i = 0; i < resposta.length; i++) {
       var registro = resposta[i];
-      dados.datasets[0].data.push(registro.qtdA);
+      console.log(registro.titU);
+      dados.datasets[0].data.push(registro.titU);
 
   }
   const config = {
